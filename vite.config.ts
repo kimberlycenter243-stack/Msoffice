@@ -1,10 +1,18 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  base: "/",                  // site servi à la racine du domaine Netlify
+  build: {
+    outDir: "dist",           // (par défaut) mais on le fixe explicitement
+    sourcemap: true           // utile pour voir l’erreur exacte si ça plante en prod
   },
+  optimizeDeps: {
+    exclude: ["lucide-react"]
+  },
+  // (optionnel mais pratique si une lib lit process.env côté client)
+  define: {
+    "process.env": {}
+  }
 });
