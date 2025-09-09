@@ -38,10 +38,10 @@ function App() {
       
       <main>
         <Hero />
+        <RegistrationForm />
         <About />
         <Program />
         <InfoGrid />
-        <RegistrationForm />
         <FAQ />
         <Contact />
       </main>
