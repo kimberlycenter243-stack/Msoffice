@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Program from './components/Program';
-import Benefits from './components/Benefits';
 import InfoGrid from './components/InfoGrid';
 import RegistrationForm from './components/RegistrationForm';
 import FAQ from './components/FAQ';
@@ -12,7 +11,6 @@ import Footer from './components/Footer';
 
 const navigation = [
   { label: 'Programme', href: '#programme' },
-  { label: 'Avantages', href: '#avantages' },
   { label: 'Infos pratiques', href: '#infos' },
   { label: 'FAQ', href: '#faq' }
 ];
@@ -42,7 +40,6 @@ function App() {
         <Hero />
         <About />
         <Program />
-        <Benefits />
         <InfoGrid />
         <RegistrationForm />
         <FAQ />
